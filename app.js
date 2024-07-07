@@ -33,4 +33,3 @@ resetButton.addEventListener("click", () => {
     displayAge.style.visibility = "hidden";
     dateOfBirth.value = '';
 });
-Explanatio
