@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.glass{
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box{
+    height: 40%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.displayAge{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    height: 40%;
+    width: 50%;
+    background-color: #468d9c;
+    border-radius:12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    font-family: "Lilita One", sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+#age{
+    color:white;
+    font-size:50px;
+    margin:20px;
+    font-weight:bold;
+}
+
+.nam{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    z-index: 10;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+     font-family: "Lilita One", sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+h1::before{
+    position: absolute;
+    content: "AGE CALCULATOR";
+    top: -5px;
+    left: -5px;
+    z-index: 2;
+    /* background-color: red; */
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+}
+
+#currDate{
+    margin: 20px 0;
+    font-size: 33px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    /* font-weight: 500; */
+    font-family: "Lilita One", sans-serif;
+    
+    text-align: center;
+}
+
+.format{
+    margin: 20px 0;
+    font-size: 28px;
+    /* font-family: 'Arial Narrow Bold', sans-serif; */
+    font-family: "Lilita One", sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+button{
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Lilita One", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button:hover,
+button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button:active {
+  opacity: .5;
+}
+
+
+input{
+    font-size:20px;
+    padding:10px;
+    width: 60%;
+    /* margin:20px; */
+    text-align:center;
+    border-radius:5px;
+    border:1px solid white;
+    cursor:pointer;
+
+
+}
+
+@media(max-width:500px){
+.nam{
+    font-size: 42px;
+}
+.format{
+    font-size: 20px;
+}
+input{
+    font-size: 13px;
+}
+button{
+    font-size: 15px;
+}
+#currDate{
+    font-size: 24px;
+}
+#age{
+    font-size: 35px;
+}
+}
+
